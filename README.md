@@ -17,4 +17,6 @@
 <p>Backend files and folders:</p>
 <ol>
 <li>routes folder: contains auth.routes.js where we define our routes to be used in server.js</li>
+<li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js</li>
+<li>db folder: contains connectToMongoDB.js where we connect to MongoDB database</li>
 <li>server.js: contains all the backend code</li>
