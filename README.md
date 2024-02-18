@@ -20,3 +20,4 @@
 <li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js</li>
 <li>db folder: contains connectToMongoDB.js where we connect to MongoDB database</li>
 <li>server.js: contains all the backend code</li>
+<li>models folder: contains user.model.js where we define our user schema</li>
