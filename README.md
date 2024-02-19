@@ -9,7 +9,9 @@
 <li>bcrypt: To hash password</li>
 <li>jsonwebtoken: To create token for authentication</li>
 <li>mongoose: To connect to MongoDB</li>
-<li>cookie-parser: To parse cookies</li>
+<li>cookie-parser: To parse cookies passsed to req.body</li>
+<li>jwt are used to create token for authentication</li>
+<li>To generate a secure random number as your jwt secret key, use your bash and type: openssl rand -base64 32'</li>
 </ol>
 
 <h3>Backend</h3>
