@@ -14,6 +14,7 @@
 
 <h3>Backend</h3>
 <p>Backend is created using Node.js and Express. MongoDB is used as database. Socket.io is used to create real time chat application. Bcrypt is used to hash password. Jsonwebtoken is used to create token for authentication. Cookie-parser is used to parse cookies.</p>
+<p>We used postman api to test our backend routes.</p>
 <p>Backend files and folders:</p>
 <ol>
 <li>routes folder: contains auth.routes.js where we define our routes to be used in server.js</li>

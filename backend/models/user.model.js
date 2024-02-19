@@ -1,38 +1,36 @@
-// fields for users
 import mongoose from "mongoose";
 
-// create a schema and put our fields in it
-const userSchema = new mongoose.Schema({
-    fullName: {
-        type: String,
-        required: true
-    },
+// Define the user schema
+const userSchema = new mongoose.Schema(
+	{
+		fullName: {
+			type: String,
+			required: true,
+		},
+		username: {
+			type: String,
+			required: true,
+			unique: true,
+		},
+		password: {
+			type: String,
+			required: true,
+			minlength: 6,
+		},
+		gender: {
+			type: String,
+			required: true,
+			enum: ["male", "female"],
+		},
+		profilePic: {
+			type: String,
+			default: "",
+		},
+		// createdAt, updatedAt => Member since <createdAt>
+	},
+);
 
-    username: {
-        type: String,
-        required: true,
-        unique: true
-    },
-
-    password: {
-        type: String,
-        required: true,
-        minlength: 6
-    },
-
-    gender: {
-        type: String,
-        required: true,
-        enum: ["male", "female"]
-    },
-
-    profilePic: {
-        type: String,
-        default: ""
-    },
-});
-
-// create a model from the  above schema
+// create a model from schema and export it
 const User = mongoose.model("User", userSchema);
 
 export default User;
