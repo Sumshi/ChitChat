@@ -56,10 +56,43 @@ export const signup = async (req, res) => {
 	}
 };
 
-export const login = (req, res) => {
-    console.log("loginUser");
+export const login = async (req, res) => {
+    try {
+		const { username, password } = req.body;// get username and password from req.body
+		const user = await User.findOne({ username });// find user by username
+
+		// check if the password is correct, if not send an error
+		const isPasswordCorrect = await bcrypt.compare(password, user?.password || "");
+
+		// if incorrect password or user doesn't exist, send an error
+		if (!user || !isPasswordCorrect) {
+			return res.status(400).json({ error: "Invalid username or password" });
+		}
+
+		// Generate JWT token here
+		generateTokenAndSetCookie(user._id, res);
+
+		// if everything is correct, send user data
+		res.status(200).json({
+			_id: user._id,
+			fullName: user.fullName,
+			username: user.username,
+			profilePic: user.profilePic,
+		});
+	}
+	catch (error) {
+		console.log("Error in login controller", error.message);
+		res.status(500).json({ error: "Internal Server Error" });
+	}
 };
 
-export const logout = (req, res) => {
-    console.log("logoutUser");
+export const logout = async (req, res) => {
+    try {
+		// clear the cookie
+		res.cookie("jwt", "", { maxAge: 0 });
+		res.status(200).json({ message: "Logged out successfully" });
+	} catch (error) {
+		console.log("Error in logout controller", error.message);
+		res.status(500).json({ error: "Internal Server Error" });
+	}
 };
