@@ -27,7 +27,7 @@ const userSchema = new mongoose.Schema(
 			default: "",
 		},
 		// createdAt, updatedAt => Member since <createdAt>
-	},
+	}, { timestamps: true }
 );
 
 // create a model from schema and export it
