@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 import cookieParser from "cookie-parser";
 import connectToMongoDB from './db/connectToMongoDB.js';
 import authRoutes from './routes/auth.routes.js';
-
+import messageRoutes from './routes/message.routes.js';
 
 const app = express();
 // define the ports for the server
@@ -15,9 +15,11 @@ app.use(express.json()); // to parse the incoming requests with JSON payloads (f
 app.use(cookieParser()); // to parse the incoming cookies from the request headers
 
 // instead of defining all routes here, use middleware to define routes in a separate file
+// login, signup, logout routes
 app.use("/api/auth", authRoutes);
 
-
+// messages routes
+app.use("/api/messages", messageRoutes);
 
 // routes
 // app.get('/', (req, res) => {

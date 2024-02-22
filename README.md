@@ -19,12 +19,21 @@
 <p>We used postman api to test our backend routes.</p>
 <p>Backend files and folders:</p>
 <ol>
-<li>routes folder: contains auth.routes.js where we define our routes to be used in server.js</li>
-<li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js</li>
+<li>routes folder: contains auth.routes.js where we define our authentication routes(signup, login and logout) to be used in server.js
+messages.routes.js where we define our message routes (api/messages/send/id)to be used in server.js</li>
+</li>
+<li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js
+messages.controller.js where we define our controllers to be used in messages.routes.js</li>
+</li>
 <li>db folder: contains connectToMongoDB.js where we connect to MongoDB database</li>
 <li>server.js: contains all the backend code</li>
-<li>models folder: contains user.model.js where we define our user schema</li>
-<li>Message model and message controllers for sending messages and receiving them from the database
+<li>
+models folder: contains user.model.js where we define our user schema
+message model.js where we define our message schema
+conversation.model.js where we define our conversation schema</li>
+</li>
+<li>middleware folder: contains protectRoute.js, this file protects the routes from unauthorized access</li>
+<li>
 <p>We will have a message collection wih unique id, senderid, receiverid, message, and timestamp</p>
 <p>For conversation model, we will have a unique id, participants array[1, 2] and the messages array</p>
 </li>
