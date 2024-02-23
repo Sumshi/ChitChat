@@ -19,7 +19,7 @@
 <p>We used postman api to test our backend routes.</p>
 <p>Backend files and folders:</p>
 <ol>
-<li>routes folder: contains auth.routes.js where we define our authentication routes(signup, login and logout) to be used in server.js
+<li>routes folder: contains auth.routes.js where we define our authentication routes(signup, login and logout) to be used in server.js<br>
 messages.routes.js where we define our message routes (api/messages/send/id)to be used in server.js</li>
 </li>
 <li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js

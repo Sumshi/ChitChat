@@ -8,7 +8,7 @@ import messageRoutes from './routes/message.routes.js';
 const app = express();
 // define the ports for the server
 const PORT = process.env.PORT || 5000;
-dotenv.config();
+dotenv.config();// loads environment variables from a .env file into process.env
 
 // N/B: The order of the middleware is important, define app.use before specifying the routes
 app.use(express.json()); // to parse the incoming requests with JSON payloads (from req.body)
