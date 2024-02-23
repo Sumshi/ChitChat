@@ -1,5 +1,5 @@
 <h1>Welcome to ChitChat</h1>
-<p>ChitChat is a chat application that allows you to send messages to your friends in real time. You can create an account and add friends to your friends list. You can also create chat rooms and invite your friends to join them. You can also send private messages to your friends. You can also send messages to your friends in real time. You can also create an account and add friends to your friends list. You can also create chat rooms and invite your friends to join them. You can also send private messages to your friends.</p>
+<p>it is a realtime chat application where users can chat with each other. It is created using Node.js, Express, MongoDB, Socket.io, Bcrypt, Jsonwebtoken, and Cookie-parser.</p>
 <h2>Packages installed</h2>
 <ol>
 <li>express: To initialize express server</li>
@@ -20,20 +20,36 @@
 <p>Backend files and folders:</p>
 <ol>
 <li>routes folder: contains auth.routes.js where we define our authentication routes(signup, login and logout) to be used in server.js<br>
-messages.routes.js where we define our message routes (api/messages/send/id)to be used in server.js</li>
-</li>
-<li>controllers folder: contains auth.controller.js where we define our controllers to be used in auth.routes.js
-messages.controller.js where we define our controllers to be used in messages.routes.js</li>
-</li>
+ messages.routes.js where we define our message routes (api/messages/send/id)to be used in server.js<br>
+user.routes.js where we define our user routes to be used in server.js</li>
+<br>
+<br>
+
+<li>controllers folder: contains auth.controller.js where we define our authentication controller function(login, signup and logout) to be used in auth.routes.js<br>
+messages.controller.js where we define our {sendMessage and getMessage} functions to be used in messages.routes.js<br>
+user.controller.js where we define our {getUserForSidebar} functions to be used in user.routes.js</li>
+<br>
+<br>
+
 <li>db folder: contains connectToMongoDB.js where we connect to MongoDB database</li>
-<li>server.js: contains all the backend code</li>
+<br>
+<br>
+
+<li>server.js: contains all the backend routes</li>
+<br>
+<br>
+
 <li>
-models folder: contains user.model.js where we define our user schema
-message model.js where we define our message schema
+models folder: contains user.model.js where we define our user schema<br>
+message model.js where we define our message schema<br>
 conversation.model.js where we define our conversation schema</li>
-</li>
+<br>
+<br>
+
 <li>middleware folder: contains protectRoute.js, this file protects the routes from unauthorized access</li>
-<li>
-<p>We will have a message collection wih unique id, senderid, receiverid, message, and timestamp</p>
-<p>For conversation model, we will have a unique id, participants array[1, 2] and the messages array</p>
-</li>
+<br>
+<br>
+
+<li>utils folder: contains generateToken.js where the token used for authentication and security is generated</li>
+
+<ol>
