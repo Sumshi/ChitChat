@@ -1,3 +1,5 @@
+// this component is the sidebar of the chat app with conversations and search input
+
 import React from 'react'
 import SearchInput from './SearchInput';
 import Conversations from './Conversations';

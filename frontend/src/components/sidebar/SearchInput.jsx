@@ -1,3 +1,4 @@
+// this file is used to create a search input field in the sidebar
 import React from 'react'
 import { BsSearch } from "react-icons/bs";
 

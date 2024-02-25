@@ -1,3 +1,5 @@
+// this file represents a list of conversations from conversation file  in the sidebar
+
 import React from 'react';
 import Conversation from './Conversation';
 

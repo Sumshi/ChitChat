@@ -1,3 +1,5 @@
+// this file represents a single conversation in the sidebar
+
 import React from 'react'
 
 const Conversation = () => {
