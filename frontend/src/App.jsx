@@ -2,7 +2,8 @@ import './App.css';
 import Login  from './pages/login/Login';
 import SignUp from './pages/signup/SignUp';
 import Home from './pages/home/Home';
-
+// for routing pages such as about, home, contact etc use react-router-dom
+import { Route, Routes } from "react-router-dom";
 
 function App() { 
   return (
@@ -10,7 +11,13 @@ function App() {
     <div className='p-4 h-screen flex items-center justify-center'>
       {/* <Login /> */}
       {/* <SignUp /> */}
-      <Home />
+      {/* <Home /> */}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
     </div>
     </>
   )
