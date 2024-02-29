@@ -1,5 +1,8 @@
-import React from 'react'
-const GenderCheckbox = () => {
+import React from 'react';
+import {onCheckboxChange, selectedGender} from './SignUp';
+
+
+const GenderCheckbox = (onCheckboxChange, selectedGender) => {
   return (
     <div className='flex'>
       <div className='form-control'>
@@ -7,6 +10,8 @@ const GenderCheckbox = () => {
             <span className='label-text text-white'>Male</span>
             <input type="checkbox" className='checkbox
              border-slate-900'/>
+             checked={selectedGender === 'male'}
+              onChange={() => onCheckboxChange("male")}
         </label>
       </div>
 
@@ -15,6 +20,8 @@ const GenderCheckbox = () => {
             <span className='label-text text-white'>Female</span>
             <input type="checkbox" className='checkbox
              border-slate-900'/>
+             checked={selectedGender === 'female'}
+              onChange={() => onCheckboxChange("female")}
         </label>
       </div>
 
