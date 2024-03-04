@@ -14,3 +14,6 @@ Currently, two official plugins are available:
 <p>use Daisy Ui for the frontend styling(easy and simple tailwind styles): https://daisyui.com/docs/installation
 npm i -D daisyui@latest
 </p>
+
+<p>React hot toast for the toast notifications: https://react-hot-toast.com/docs</p>
+<br>
