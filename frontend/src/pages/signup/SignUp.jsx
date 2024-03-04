@@ -1,6 +1,7 @@
 import React from 'react'
 import GenderCheckbox from './GenderCheckbox';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const SignUp = () => {
 
@@ -14,7 +15,7 @@ const SignUp = () => {
   });
 
 // gender male or female checkbox
-  const handleCheckboxChange = (e) => {
+  const handleCheckboxChange = (gender) => {
     setInputs({...inputs, gender})
   }
   const handleSubmit = (e) => {
@@ -88,7 +89,7 @@ const SignUp = () => {
         <div>
           <button className='btn btn-block btn-sm mt-2 text-white'>Sign Up</button>
         </div>
-      </form>
+      </form> 
       </div>
     </div>
   ) 
