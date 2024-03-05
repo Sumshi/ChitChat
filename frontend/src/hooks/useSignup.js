@@ -5,9 +5,10 @@ import  toast  from 'react-hot-toast';
 const useSignup = () => {
     const [loading, setLoading] = useState(false);
 
-    const signup = async ({fullName,username,password,confirmPassword,gender}) => {
-        const success = handleInputErros({fullName,username,password,confirmPassword,gender})
+    const signup = async ({fullName, username, password, confirmPassword, gender}) => {
+        const success = handleInputErros({fullName, username, password, confirmPassword, gender})
         if(!success) return;
+
         setLoading(true);
 
         try {
@@ -21,6 +22,9 @@ const useSignup = () => {
             });
 
             const data = await res.json();
+            if (data.error) {
+				throw new Error(data.error);
+			}
             console.log(data);
 
         } catch (error) {
