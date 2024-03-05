@@ -6,6 +6,7 @@ const Message = () => {
       <div className="avatar online">
         <div className="w-24 rounded-full">
             <img src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+            {/* <img src={conversation.profilePic} alt='user avatar' /> */}
         </div>
     </div>
 
