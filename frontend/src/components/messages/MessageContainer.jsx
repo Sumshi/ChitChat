@@ -9,10 +9,10 @@ import useConversation from "../../zustand/useConversation";
 const MessageContainer = () => {
   // const isNoChatSelected = true;
   const { selectedConversation, setSelectedConversation } = useConversation(); 
-  useEffect(() => {
-		// cleanup function (unmounts)
-		return () => setSelectedConversation(null);
-	}, [setSelectedConversation]);
+  // useEffect(() => {
+	// 	// cleanup function (unmounts)
+	// 	return () => setSelectedConversation(null);
+	// }, [setSelectedConversation]);
   
   
   return (
